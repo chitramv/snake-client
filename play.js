@@ -26,4 +26,4 @@ conn.on('connect', () => {
       },1000)
 
 });
-setupInput();
+setupInput(conn);
