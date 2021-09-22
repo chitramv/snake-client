@@ -17,13 +17,7 @@ conn.on('connect', () => {
     //setTimeout(() => {
      // clearInterval(moveup)
     //},2000)
-
-    const moveright = setInterval(() => {
-      conn.write('Move: left');},50)
-
-      setTimeout(() => {
-        clearInterval(moveright)
-      },1000)
+    
 
 });
 setupInput(conn);

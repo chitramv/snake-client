@@ -14,7 +14,9 @@ const setupInput = function (conn) {
   stdin.resume();
   return stdin;
 };
+
 const handleUserInput = function (key) {
+
   // \u0003 maps to ctrl+c input
 if ( key === '\u0003') {
   process.exit();// if ctrl + c is pressed then connection should terminate
@@ -22,6 +24,7 @@ if ( key === '\u0003') {
 if ( key === 'w') {
 
     connection.write('Move: up');
+
 }
 if ( key === 'a') {
     connection.write('Move: left');
@@ -32,6 +35,9 @@ if ( key === 'a') {
  if ( key === 'd') {
     connection.write('Move: right');
  }
+ if(key === 'q') {
+  connection.write("Say: Hiii");
+   }
 };
 stdin.on("data", handleUserInput);
 
