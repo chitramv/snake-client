@@ -10,3 +10,19 @@ conn.on("connect", () => {
 conn.on('connect', () => {
   conn.write('Name: CMV');
 });
+conn.on('connect', () => {
+  //const moveup = setInterval(() => {
+    //conn.write('Move: up');},50)
+
+    //setTimeout(() => {
+     // clearInterval(moveup)
+    //},2000)
+
+    const moveright = setInterval(() => {
+      conn.write('Move: left');},50)
+
+      setTimeout(() => {
+        clearInterval(moveright)
+      },2000)
+
+});
